@@ -225,3 +225,104 @@ model-viewer {
   }
 
 }
+/* ===== searchsort ===== */
+
+.searchsort {
+  position: relative;
+  width: 250px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  display: none;
+  z-index: 5000;
+}
+
+.search-option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-option:hover {
+  background: crimson;
+  color: white;
+}
+
+/* ===== modelviewer専用スコープ ===== */
+
+.viewer-container {
+  position: relative;
+}
+
+/* 検索UI */
+
+.mv-search{
+  position: fixed;
+  top: 650px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  z-index: 5000;
+}
+
+#searchInput{
+  width: 100%;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  text-align: center;
+  font-size: 14px;
+}
+
+.mv-dropdown{
+  margin-top: 6px;
+  background: white;
+  border-radius: 14px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.viewer-container .search-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.viewer-container .search-option:hover {
+  background: crimson;
+  color: white;
+}
+
+/* ===== ホットスポット透明制御 ===== */
+
+/* 通常は100% */
+.viewer-container .Hotspot {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+/* 押されたやつ */
+.viewer-container .Hotspot.active {
+  opacity: 1;
+}
+
+/* 押された以外 */
+.viewer-container .Hotspot.dim {
+  opacity: 0.2;
+}

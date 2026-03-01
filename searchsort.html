@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-1 屋外誘導(正門～本館までの車道)</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+
+
+
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const hotspots = document.querySelectorAll('.Hotspot');
+
+  hotspots.forEach(hotspot => {
+    hotspot.addEventListener('click', () => {
+
+      const id = hotspot.id;
+
+      const targetItem = document.querySelector(
+        `.job-item[data-target="${id}"]`
+      );
+
+      if (targetItem) {
+        targetItem.click();
+      }
+
+    });
+  });
+
+});
+
+// 透明化リセット
+window.addEventListener('load', () => {
+  resetAll();
+});
+</script>
+
+</head>
+
+
+
+<body>
+
+<!-- 左上戻るボタン -->
+<div class="top-buttons">
+  <button onclick="location.href='index.html'">← 戻る</button>
+  <button id="infoBtn">i info</button>
+</div>
+<!-- 上表示文字 -->
+<h1>3-1 屋外誘導(正門～本館までの車道)</h1>
+
+<div class="viewer-container">
+
+<model-viewer 
+  id="viewer"
+  src="models/20260222_WEB_MejiroUni_MatMap.glb"
+  camera-controls
+  tone-mapping="neutral"
+  shadow-intensity="1"
+  camera-orbit="40deg 50deg 500m"
+  min-camera-orbit="auto auto 250m"
+  >
+
+    <button class="Hotspot" slot="hotspot-1" id="hs1"
+      data-surface="9 0 464 472 473 0.482 0.245 0.274">
+      
+        <div class="HotspotAnnotation"data-search="せいもん　せい　せ">正門① </div>
+        <img src="images/3-1images/3-1_1_seimon1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-3" id="hs2"
+      data-surface="9 0 310 308 332 0.012 0.046 0.942">
+        <div class="HotspotAnnotation"data-search="せいもん　せい　せ">正門②</div>
+        <img src="images/3-1images/3-1_2_seimon2.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-4" id="hs3"
+      data-surface="9 0 628 651 652 0.635 0.036 0.329">
+        <div class="HotspotAnnotation"data-search="しゃどう　しゃ　し">車道①</div>
+        <img src="images/3-1images/3-1_3_siyadou1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-5" id="hs4"
+      data-surface="9 0 666 607 667 0.326 0.236 0.438">
+        <div class="HotspotAnnotation"data-search="しゃどう　しゃ　し">車道②</div>
+        <img src="images/3-1images/3-1_4_siyadou2.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-6" id="hs5"
+      data-surface="9 0 488 386 398 0.878 0.085 0.036">
+        <div class="HotspotAnnotation"data-search="ほんかん　ほん　ほ">本館ロータリー前</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+     <button class="Hotspot" slot="hotspot-7" id="hs6"
+      data-surface="9 0 1119 272 237 0.604 0.038 0.359">
+        <div class="HotspotAnnotation"data-search="ほんかん　ほん　ほ">本館受付通過後</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-8" id="hs7"
+      data-surface="9 0 730 63 782 0.294 0.706 0.000">
+        <div class="HotspotAnnotation" data-search="とけいとう　とうけいとう　とけい">時計塔下</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-9" id="hs8"
+      data-surface="9 0 84 202 1129 0.641 0.314 0.045">
+        <div class="HotspotAnnotation"data-search="だ　だいに　だい">第二体育館階段降り口付近</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    
+        <button class="Hotspot" slot="hotspot-10" id="hs9"
+      data-surface="9 0 30 54 46 0.674 0.193 0.133">
+        <div class="HotspotAnnotation"data-search="すとーん　すと　す">ストーンサークル前</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+     <button class="Hotspot" slot="hotspot-11" id="hs10"
+      data-surface="9 0 128 125 95 0.144 0.621 0.235">
+        <div class="HotspotAnnotation"data-search="10 じゅう　じゅ　じ">10号館入口前兼キッチンカー列誘導</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-12" id="hs11"
+      data-surface="9 0 1119 272 237 0.112 0.845 0.043">
+        <div class="HotspotAnnotation"data-search="1 いち">1号館入口前</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-13" id="hs12"
+      data-surface="10 0 4668 4660 4664 0.524 0.180 0.296">
+        <div class="HotspotAnnotation">1号館内階段降り口前学食までの誘導</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+</model-viewer>
+</div>
+
+<svg id="lineLayer"></svg>
+
+<div class="mv-search">
+  <input type="text" id="searchInput" placeholder="場所名を入力..." autocomplete="off">
+  <div id="searchDropdown" class="mv-dropdown"></div>
+</div>
+
+<!-- 左上info内部 -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2>このページについて</h2>
+    <p>
+      スワイプでモデル回転、二本指で拡大縮小<br>
+      左クリックしてドラッグでモデル回転、マウスホイールで拡大縮小<br>
+      下のボタンでその場所を強調し、その場所の画像を表示します<br>
+      2026ハヤシ
+    </p>
+  </div>
+</div>
+
+<script>
+const items = document.querySelectorAll('.job-item');
+const hotspots = document.querySelectorAll('.Hotspot');
+const svg = document.getElementById('lineLayer');
+const viewer = document.getElementById('viewer');
+const modal = document.getElementById('modal');
+const infoBtn = document.getElementById('infoBtn');
+
+
+infoBtn.addEventListener('click', ()=>{
+  modal.style.display = 'flex';
+});
+
+modal.addEventListener('click', (e)=>{
+  if(e.target === modal){
+    modal.style.display = 'none';
+  }
+});
+
+function resetAll(){
+  svg.innerHTML = '';
+  items.forEach(i=>i.classList.remove('active'));
+  hotspots.forEach(h=>{
+    h.classList.remove('dim');
+    h.querySelector('.popup-image').style.display='none';
+  });
+}
+
+/* カメラ寄せ*/
+async function centerHotspot(target){
+
+  await viewer.updateComplete;
+
+  const hotspot = viewer.queryHotspot(target.slot);
+  if(!hotspot) return;
+
+  const pos = hotspot.position;
+
+  viewer.cameraTarget = `${pos.x}m ${pos.y}m ${pos.z}m`;
+
+
+  let theta, phi, radius;
+
+  switch(target.id){
+
+    case "hs1": // ① 正門
+      theta = "30deg";
+      phi   = "70deg";
+      radius = "150m";
+      break;
+
+    case "hs2": // ② 正門
+      theta = "50deg";
+      phi   = "65deg";
+      radius = "180m";
+      break;
+
+    case "hs3": // ③ 車道
+      theta = "24deg";
+      phi   = "57deg";
+      radius = "220m";
+      break;
+
+    case "hs4": // ④ 車道
+      theta = "0.9deg";
+      phi   = "57deg";
+      radius = "260m";
+      break;
+
+    case "hs5": // ⑤ ロータリー
+      theta = "319deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
+    default:
+      theta = "40deg";
+      phi   = "60deg";
+      radius = "200m";
+  }
+
+  viewer.cameraOrbit = `${theta} ${phi} ${radius}`;
+}
+
+/* 線描画 */
+/* ===== 検索欄から線を引く ===== */
+function drawLineToHotspot(hotspot){
+
+  svg.innerHTML = '';
+
+  const rect1 = searchInput.getBoundingClientRect();
+  const rect2 = hotspot.getBoundingClientRect();
+
+  const line = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "line"
+  );
+
+  line.setAttribute("x1", rect1.left + rect1.width/2);
+  line.setAttribute("y1", rect1.bottom);
+  line.setAttribute("x2", rect2.left + rect2.width/2);
+  line.setAttribute("y2", rect2.top + rect2.height/2);
+
+  line.setAttribute("stroke", "crimson");
+  line.setAttribute("stroke-width", "2");
+
+  svg.appendChild(line);
+}
+
+items.forEach(item=>{
+  item.addEventListener('click', ()=>{
+    if(item.classList.contains('active')){
+      resetAll();
+      return;
+    }
+
+    items.forEach(i=>i.classList.remove('active'));
+    hotspots.forEach(h=>{
+      h.classList.add('dim');
+      h.querySelector('.popup-image').style.display='none';
+    });
+
+    item.classList.add('active');
+
+    const target = document.getElementById(item.dataset.target);
+    target.classList.remove('dim');
+    target.querySelector('.popup-image').style.display='block';
+
+    drawLineTo(item);
+
+    
+    centerHotspot(target);
+  });
+});
+
+viewer.addEventListener('camera-change', ()=>{
+  const active = document.querySelector('.Hotspot.active');
+  if(active){
+    drawLineToHotspot(active);
+  }
+});
+
+window.addEventListener('resize', ()=>{
+  const active = document.querySelector('.Hotspot.active');
+  if(active){
+    drawLineToHotspot(active);
+  }
+});
+
+/* ===== searchsort機能 ===== */
+/* ===== 100件対応検索 ===== */
+
+const searchInput = document.getElementById("searchInput");
+const searchDropdown = document.getElementById("searchDropdown");
+const hotspotsAll = document.querySelectorAll(".Hotspot");
+
+/* hotspotデータ化 */
+const hotspotData = [...hotspotsAll].map(h => {
+
+  const el = h.querySelector(".HotspotAnnotation");
+
+  const label = el.textContent.trim();
+  const searchText = el.dataset.search || "";
+
+  return {
+    id: h.id,
+    label: label,
+    search: (label + " " + searchText).toLowerCase()
+  };
+});
+
+function toHiragana(str){
+  return str
+    .replace(/[ァ-ン]/g, s =>
+      String.fromCharCode(s.charCodeAt(0) - 0x60)
+    )
+    .toLowerCase();
+}
+
+searchInput.addEventListener("input", () => {
+
+  svg.innerHTML = '';
+  document.querySelectorAll('.Hotspot.active')
+    .forEach(h => h.classList.remove('active'));
+
+  const keyword = searchInput.value.trim().toLowerCase();
+  searchDropdown.innerHTML = "";
+
+  if(keyword === ""){
+    searchDropdown.style.display = "none";
+    resetAll();
+    hotspotsAll.forEach(h=>h.classList.remove("dim"));
+    return;
+  }
+
+const matches = hotspotData.filter(h =>
+  h.search.includes(keyword)
+);
+
+  if(matches.length === 0){
+    searchDropdown.style.display = "none";
+    return;
+  }
+
+  matches.forEach(data => {
+
+    const option = document.createElement("div");
+    option.className = "search-option";
+    option.textContent = data.label;
+
+    option.addEventListener("click", () => {
+
+      searchInput.value = data.label;
+      searchDropdown.style.display = "none";
+
+      activateHotspot(data.id);
+    });
+
+    searchDropdown.appendChild(option);
+  });
+
+  searchDropdown.style.display = "block";
+});
+
+
+function activateHotspot(id){
+
+  resetAll();
+
+  hotspotsAll.forEach(h=>{
+    h.classList.add("dim");
+  });
+
+  const target = document.getElementById(id);
+
+  target.classList.remove("dim");
+  target.classList.add("active");
+  target.querySelector(".popup-image").style.display='block';
+
+  centerHotspot(target);
+
+  drawLineToHotspot(target);
+}
+
+
+/* 外クリックで閉じる */
+document.addEventListener("click", (e)=>{
+  if(!e.target.closest(".mv-search")){
+    searchDropdown.style.display = "none";
+  }
+});
+
+function drawLineFromSearchToHotspot(hotspot){
+
+  svg.innerHTML = '';
+
+  const rect1 = document.getElementById("searchInput").getBoundingClientRect();
+  const rect2 = hotspot.getBoundingClientRect();
+
+  const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+
+  line.setAttribute("x1", rect1.left + rect1.width/2);
+  line.setAttribute("y1", rect1.bottom);
+  line.setAttribute("x2", rect2.left + rect2.width/2);
+  line.setAttribute("y2", rect2.top + rect2.height/2);
+
+  line.setAttribute("stroke", "crimson");
+  line.setAttribute("stroke-width", "2");
+
+  svg.appendChild(line);
+}
+</script>
+
+</body>
+</html>
