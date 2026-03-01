@@ -331,9 +331,3 @@ model-viewer {
   opacity: 0.2;
 }
 
-@media (max-width: 768px){
-  .mv-search{
-    width: 80%;
-    bottom: -40px;
-  }
-}
