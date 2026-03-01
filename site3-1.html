@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// ページ読み込み時に完全リセット
+// 透明化リセット
 window.addEventListener('load', () => {
   resetAll();
 });
@@ -50,12 +50,12 @@ window.addEventListener('load', () => {
 
 <body>
 
-<!-- 左上戻る -->
+<!-- 左上戻るボタン -->
 <div class="top-buttons">
   <button onclick="location.href='index.html'">← 戻る</button>
   <button id="infoBtn">i info</button>
 </div>
-
+<!-- 上表示文字 -->
 <h1>3-1 屋外誘導(正門～本館までの車道)</h1>
 
 <div class="viewer-container">
@@ -114,7 +114,7 @@ window.addEventListener('load', () => {
   <div class="job-item" data-target="hs5">⑤ ロータリー</div>
 </div>
 
-<!-- 左上info -->
+<!-- 左上info内部 -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <h2>このページについて</h2>
@@ -135,7 +135,7 @@ const viewer = document.getElementById('viewer');
 const modal = document.getElementById('modal');
 const infoBtn = document.getElementById('infoBtn');
 
-/* infoボタン */
+
 infoBtn.addEventListener('click', ()=>{
   modal.style.display = 'flex';
 });
@@ -155,7 +155,7 @@ function resetAll(){
   });
 }
 
-/* ====== ★確実中央寄せ ====== */
+/* カメラ寄せ*/
 async function centerHotspot(target){
 
   await viewer.updateComplete;
@@ -165,10 +165,8 @@ async function centerHotspot(target){
 
   const pos = hotspot.position;
 
-  // まずターゲットを合わせる
   viewer.cameraTarget = `${pos.x}m ${pos.y}m ${pos.z}m`;
 
-  /* ===== ホットスポットごとに設定 ===== */
 
   let theta, phi, radius;
 
@@ -251,7 +249,7 @@ items.forEach(item=>{
 
     drawLineTo(item);
 
-    /* ★ 中央に寄せる */
+    
     centerHotspot(target);
   });
 });

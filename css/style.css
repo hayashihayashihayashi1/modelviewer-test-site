@@ -1,6 +1,4 @@
-/* =========================
-   共通ベース
-========================= */
+/* 白背景フォント */
 html, body {
   margin: 0;
   padding: 0;
@@ -26,9 +24,7 @@ h1 {
   margin: 10px 0;
 }
 
-/* =========================
-   上部ボタン
-========================= */
+/* 左上ボタン */
 .top-buttons {
   position: fixed;
   top: 15px;
@@ -52,9 +48,7 @@ h1 {
   background: #f0f0f0;
 }
 
-/* =========================
-   モーダル
-========================= */
+/* モーダル */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -76,9 +70,7 @@ h1 {
   text-align: center;
 }
 
-/* =========================
-   model-viewer
-========================= */
+/* model-viewer */
 .viewer-container {
   position: relative;
   width: 100%;
@@ -91,9 +83,7 @@ model-viewer {
   display: block;
 }
 
-/* =========================
-   線レイヤー
-========================= */
+/* 線レイヤー */
 #lineLayer {
   position: fixed;
   top: 0;
@@ -104,9 +94,7 @@ model-viewer {
   z-index: 999;
 }
 
-/* =========================
-   ホットスポット
-========================= */
+/* ホットスポット */
 .Hotspot {
   width: 18px;
   height: 18px;
@@ -144,9 +132,7 @@ model-viewer {
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-/* =========================
-   下部ボタン
-========================= */
+/*下部ボタン*/
 .bottom-panel {
   position: fixed;
   bottom: 0;
@@ -186,9 +172,7 @@ model-viewer {
   opacity: 0.2;
 }
 
-/* =========================
-   index専用
-========================= */
+/* index専用 */
 .menu {
   margin-top: 20px;
 }
@@ -208,9 +192,7 @@ model-viewer {
   background: #eee;
 }
 
-/* =========================
-    スマホ最適化
-========================= */
+/* スマホ最適化 */
 @media (max-width: 768px) {
 
   h1 {
