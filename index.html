@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仕事紹介メニュー</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+</head>
+
+<body>
+
+<!-- 左上info -->
+<div class="top-buttons">
+  <button id="infoBtn">ℹ info</button>
+</div>
+
+<h1>メジ☆スタ3Dマップ</h1>
+
+<model-viewer 
+  id="viewer"
+  src="models/20260222_WEB_MejiroUni_MatMap.glb"
+  camera-controls
+  tone-mapping="neutral"
+  shadow-intensity="1"
+  camera-orbit="40deg 50deg 500m"
+  min-camera-orbit="auto auto 250m">
+</model-viewer>
+
+<div class="menu">
+  <a href="site3-1.html"><button>3-①屋外誘導(正門～本館までの車道)</button></a>
+  <a href="site1-2.html"><button>3-②屋外誘導(本館受付通過後~10号館~記念館近辺誘導)</button></a>
+</div>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2>このページについて</h2>
+    <p>
+      スワイプでモデル回転、二本指で拡大縮小<br>
+      左クリック＋ドラッグで回転<br>
+      マウスホイールで拡大縮小<br><br>
+      下のボタンから各エリアへ移動できます。<br>
+      2026ハヤシ
+    </p>
+  </div>
+</div>
+
+<script>
+const modal = document.getElementById('modal');
+const infoBtn = document.getElementById('infoBtn');
+
+infoBtn.addEventListener('click', ()=>{
+  modal.style.display = 'flex';
+});
+
+modal.addEventListener('click', (e)=>{
+  if(e.target === modal){
+    modal.style.display = 'none';
+  }
+});
+</script>
+
+</body>
+</html>
