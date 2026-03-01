@@ -268,11 +268,15 @@ model-viewer {
   position: relative;
 }
 
-/* 検索UI */
+/* 検索UIを3Dの少し下に配置 */
+
+.viewer-container{
+  position: relative;
+}
 
 .mv-search{
-  position: fixed;
-  top: 650px;
+  position: absolute;
+  bottom: 250px;  /* ← ここで「少し下」調整 */
   left: 50%;
   transform: translateX(-50%);
   width: 240px;
@@ -325,4 +329,11 @@ model-viewer {
 /* 押された以外 */
 .viewer-container .Hotspot.dim {
   opacity: 0.2;
+}
+
+@media (max-width: 768px){
+  .mv-search{
+    width: 80%;
+    bottom: -40px;
+  }
 }
