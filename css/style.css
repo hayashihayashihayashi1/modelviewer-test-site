@@ -276,7 +276,7 @@ model-viewer {
 
 .mv-search{
   position: absolute;
-  bottom: 250px;  /* ← ここで「少し下」調整 */
+  bottom: 500px;  /* ← ここで「少し下」調整 */
   left: 50%;
   transform: translateX(-50%);
   width: 240px;
