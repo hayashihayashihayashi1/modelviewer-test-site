@@ -14,12 +14,27 @@
 
 <body>
 
-<!-- 左上info -->
-<div class="top-buttons">
-  <button id="infoBtn">i info</button>
-</div>
+<header class="site-header">
 
-<h1>メジ☆スタ3Dマップ</h1>
+  <!-- 左：サイトロゴ -->
+  <div class="logo-left">
+    <img src="images/0-0_logos/20260315_mezisuta_logo.svg" alt="site logo">
+  </div>
+
+  <!-- 中央：タイトル -->
+  <div class="site-title">
+    メジ☆スタ3Dマップ
+  </div>
+
+  <!-- 右：クリエイターロゴ -->
+  <div class="logo-right">
+    <img src="images/0-0_logos/20260315_hayashi_logo.svg" alt="hayashi logo">
+  </div>
+
+  <!-- 一番右：info -->
+  <button id="infoBtn" class="info-btn">i</button>
+
+</header>
 
 <model-viewer 
   id="viewer"
@@ -28,13 +43,31 @@
   tone-mapping="neutral"
   shadow-intensity="1"
   camera-orbit="40deg 50deg 500m"
-  min-camera-orbit="auto auto 250m">
+  min-camera-orbit="auto 0deg 250m"
+  max-camera-orbit="auto 90deg 600m">
 </model-viewer>
 
 <div class="menu">
-  <a href="searchsort.html"><button>※開発中※配置場所ソート検索</button></a>
-  <a href="site3-1.html"><button>3-①屋外誘導(正門～本館までの車道)</button></a>
-  <a href="site1-2.html"><button>※未実装※3-②屋外誘導(本館受付通過後~10号館~記念館近辺誘導)</button></a>
+
+
+  <a href="searchsort.html">
+    <button class="main-feature">全配置場所ソート検索</button>
+  </a>
+
+
+  <a href="01_0431_1-1_OCsite.html"><button>【1-①】メジ★トーク受付</button></a>
+  <a href="02_0431_1-2_OCsite.html"><button>【1-②】各グッズ配布（SNS促進/アンケート回答企画）</button></a>
+  <a href="03_0431_1-3_OCsite.html"><button>【1-③】メジ★トーク</button></a>
+  <a href="04_0431_2-1_OCsite.html"><button>【2-①】 受付誘導・参加証確認（1号館1階ピロティ）</button></a>
+  <a href="05_0431_2-2_OCsite.html"><button>【2-②】 バッグ配布（1号館1階ピロティ）</button></a>
+  <a href="05_0431_3-1_OCsite.html"><button>【3-①】屋外誘導（正門～本館ロータリー横～受付前誘導）</button></a>
+  <a href="06_0431_3-3_OCsite.html"><button>【3-③】屋外誘導（1号館ピロティ通過後～10号館～8号館近辺誘導）</button></a>
+  <a href="07_0431_4-1_OCsite.html"><button>【4-①】屋内誘導（10号館1階・9階 エレベーターホール誘導）</button></a>
+  <a href="08_0431_4-2_OCsite.html"><button>【4-②】屋内誘導（10号館9階 説明会教室前誘導）</button></a>
+  <a href="09_0431_4-3_OCsite.html"><button>【4-③】屋内誘導（学食）</button></a>
+  <a href="10_0431_4-4_OCsite.html"><button>【4-④】屋内誘導（8号館）</button></a>
+  <a href="11_0431_4-5_OCsite.html"><button>【4-⑤】屋内誘導(佐藤重遠記念館 ガイダンス誘導)</button></a>
+  <a href="site3-1.html"><button>※未実装※3-②屋外誘導(本館受付通過後~10号館~記念館近辺誘導)</button></a>
 </div>
 <!-- 左上info内部 -->
 
@@ -65,6 +98,19 @@ modal.addEventListener('click', (e)=>{
   }
 });
 </script>
+
+<footer class="site-footer">
+
+  <div class="footer-links">
+    <a href="https://www.mejiro.ac.jp/univ/jyukensei/campuslife/mejista/">メジ☆スタ公式サイト</a>
+    <a href="https://www.mejiro.ac.jp/">目白大学</a>
+  </div>
+
+  <div class="footer-copy">
+    2026 ハヤシが作りました .
+  </div>
+
+</footer>
 
 </body>
 </html>

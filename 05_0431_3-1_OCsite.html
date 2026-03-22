@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3-1 屋外誘導(正門～本館までの車道)</title>
+<title>【3-①】屋外誘導（正門～本館ロータリー横～受付前誘導）</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
   <button id="infoBtn">i info</button>
 </div>
 <!-- 上表示文字 -->
-<h1>3-1 屋外誘導(正門～本館までの車道)</h1>
+<h1>【3-①】屋外誘導（正門～本館ロータリー横～受付前誘導）</h1>
 
 <div class="viewer-container">
 
@@ -85,32 +85,26 @@ window.addEventListener('load', () => {
     <button class="Hotspot" slot="hotspot-1" id="hs1"
       data-surface="1 0 464 472 473 0.307 0.587 0.106">
       
-        <div class="HotspotAnnotation">① 正門</div>
+        <div class="HotspotAnnotation">①正門</div>
         <img src="images/3-1images/3-1_1_seimon1.png" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-3" id="hs2"
-      data-surface="1 0 310 308 332 0.026 0.053 0.922">
-        <div class="HotspotAnnotation">② 正門</div>
+      data-surface="1 0 392 489 493 0.161 0.175 0.664">
+        <div class="HotspotAnnotation">②本館ロータリー横</div>
         <img src="images/3-1images/3-1_2_seimon2.png" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-4" id="hs3"
-      data-surface="1 0 665 612 610 0.646 0.332 0.022">
-        <div class="HotspotAnnotation">③ 車道</div>
+      data-surface="1 0 419 510 435 0.046 0.698 0.256">
+        <div class="HotspotAnnotation">③クラブハウス前誘導</div>
         <img src="images/3-1images/3-1_3_siyadou1.png" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-5" id="hs4"
-      data-surface="1 0 654 668 655 0.045 0.707 0.248">
-        <div class="HotspotAnnotation">④ 車道</div>
+      data-surface="1 0 1147 272 237 0.793 0.009 0.198">
+        <div class="HotspotAnnotation">④受付直前誘導</div>
         <img src="images/3-1images/3-1_4_siyadou2.png" class="popup-image">
-    </button>
-
-    <button class="Hotspot" slot="hotspot-6" id="hs5"
-      data-surface="1 0 392 489 493 0.161 0.175 0.664">
-        <div class="HotspotAnnotation">⑤ 本館ロータリー前</div>
-        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
     </button>
 
 </model-viewer>
@@ -119,11 +113,10 @@ window.addEventListener('load', () => {
 <svg id="lineLayer"></svg>
 
 <div class="bottom-panel">
-  <div class="job-item" data-target="hs1">① 正門</div>
-  <div class="job-item" data-target="hs2">② 正門</div>
-  <div class="job-item" data-target="hs3">③ 車道</div>
-  <div class="job-item" data-target="hs4">④ 車道</div>
-  <div class="job-item" data-target="hs5">⑤ ロータリー</div>
+  <div class="job-item" data-target="hs1">①正門</div>
+  <div class="job-item" data-target="hs2">②本館ロータリー横</div>
+  <div class="job-item" data-target="hs3">③クラブハウス前誘導</div>
+  <div class="job-item" data-target="hs4">④受付直前誘導</div>
 </div>
 
 <!-- 左上info内部 -->
