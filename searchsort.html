@@ -1,0 +1,558 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-1 屋外誘導(正門～本館までの車道)</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const hotspots = document.querySelectorAll('.Hotspot');
+
+  hotspots.forEach(hotspot => {
+    hotspot.addEventListener('click', () => {
+
+      const id = hotspot.id;
+
+      const targetItem = document.querySelector(
+        `.job-item[data-target="${id}"]`
+      );
+
+      if (targetItem) {
+        targetItem.click();
+      }
+
+    });
+  });
+
+});
+
+// 透明化解除
+window.addEventListener('load', () => {
+  resetAll();
+});
+</script>
+
+</head>
+
+
+
+<body>
+
+<!-- 左上戻る -->
+<div class="top-buttons">
+  <button onclick="location.href='index.html'">← 戻る</button>
+  <button id="infoBtn">i info</button>
+</div>
+<!-- 上表示文字 -->
+<h1>役割場所個別検索</h1>
+
+<div class="top-logo">
+  <a href="index.html">
+  <img src="images/0-0_logos/20260315_mezisuta_logo.svg" alt="logo">
+  </a>
+</div>
+
+<div class="viewer-container">
+
+<model-viewer 
+  id="viewer"
+  src="models/20260222_WEB_MejiroUni_MatMap.glb"
+  camera-controls
+  tone-mapping="neutral"
+  shadow-intensity="1"
+  camera-orbit="40deg 50deg 500m"
+  min-camera-orbit="auto 0deg 250m"
+  max-camera-orbit="auto 90deg 600m">
+
+    <button class="Hotspot" slot="hotspot-1" id="hs1"
+      data-surface="1 0 464 472 473 0.307 0.587 0.106">
+      
+        <div class="HotspotAnnotation"data-search="せいもん　せい　せ">正門① </div>
+        <img src="images/3-1images/3-1_1_seimon1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-3" id="hs2"
+      data-surface="1 0 310 308 332 0.026 0.053 0.922">
+        <div class="HotspotAnnotation"data-search="せいもん　せい　せ">正門②</div>
+        <img src="images/3-1images/3-1_2_seimon2.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-4" id="hs3"
+      data-surface="1 0 665 612 610 0.646 0.332 0.022">
+        <div class="HotspotAnnotation"data-search="しゃどう　しゃ　し">車道【8月】</div>
+        <img src="images/3-1images/3-1_3_siyadou1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-5" id="hs4"
+      data-surface="1 0 654 668 655 0.045 0.707 0.248">
+        <div class="HotspotAnnotation"data-search="しゃどう　しゃ　し">車道②</div>
+        <img src="images/3-1images/3-1_4_siyadou2.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-6" id="hs5"
+      data-surface="1 0 392 489 493 0.161 0.175 0.664">
+        <div class="HotspotAnnotation"data-search="ほんかん　ほん　ほ">本館ロータリー前【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+     <button class="Hotspot" slot="hotspot-7" id="hs6"
+      data-surface="1 0 1147 272 237 0.793 0.009 0.198">
+        <div class="HotspotAnnotation"data-search="ほんかん　ほん　ほ">本館受付通過後</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-8" id="hs7"
+      data-surface="1 0 64 195 189 0.628 0.165 0.206">
+        <div class="HotspotAnnotation" data-search="とけいとう　とうけいとう　とけい">時計塔下</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-9" id="hs8"
+      data-surface="1 0 113 110 202 0.124 0.278 0.598">
+        <div class="HotspotAnnotation"data-search="だ　だいに　だい">第二体育館階段降り口付近</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+
+        <button class="Hotspot" slot="hotspot-10" id="hs9"
+      data-surface="1 0 30 38 54 0.872 0.014 0.114">
+        <div class="HotspotAnnotation"data-search="すとーん　すと　す">ストーンサークル前</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-10" id="hs9"
+      data-surface="1 0 30 38 54 0.872 0.014 0.114">
+        <div class="HotspotAnnotation"data-search="き　きねんかん　きねん す　すと　すとーん">②記念館スロープ～ストーンサークル前【4月】【6月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+     <button class="Hotspot" slot="hotspot-11" id="hs10"
+      data-surface="1 0 128 125 95 0.159 0.561 0.280">
+        <div class="HotspotAnnotation"data-search="10 じゅう　じゅ　じ">10号館入口前兼キッチンカー列誘導</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-12" id="hs11"
+      data-surface="1 0 1147 272 237 0.102 0.836 0.062">
+        <div class="HotspotAnnotation"data-search="1 いち">1号館入口前</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-13" id="hs12"
+      data-surface="2 0 4674 4666 4670 0.553 0.218 0.230">
+        <div class="HotspotAnnotation"data-search="1 いち　ごう">1号館内階段降り口前学食までの誘導</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-14" id="hs13"
+      data-surface="2 0 4876 4873 4879 0.125 0.791 0.084">
+        <div class="HotspotAnnotation"data-search="め　めじ　メ">メジ☆トーク受付【4月】【6月】【7月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-15" id="hs14"
+      data-surface="1 0 113 110 202 0.124 0.278 0.598">
+        <div class="HotspotAnnotation"data-search="各　かく　か　グッズ　ぐ">各グッズ配布【4月】【6月】【7月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+     <button class="Hotspot" slot="hotspot-16" id="hs15"
+      data-surface="1 0 253 1167 1170 0.583 0.124 0.293">
+        <div class="HotspotAnnotation"data-search="う　うけ　うけつけ　ゆうどう">受付誘導・参加証確認【4月】【6月】【7月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-17" id="hs16"
+      data-surface="1 0 253 1167 1170 0.163 0.690 0.147">
+        <div class="HotspotAnnotation"data-search="ば　バ　バッグ　ばっぐ"> バッグ配布（1号館1階ピロティ）【4月】【6月】【7月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-18" id="hs17"
+      data-surface="1 0 464 472 473 0.307 0.587 0.106">
+        <div class="HotspotAnnotation"data-search="正門　せ　せい">正門【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-19" id="hs18"
+      data-surface="1 0 392 489 493 0.161 0.175 0.664">
+        <div class="HotspotAnnotation"data-search="ほんかん　ほん　ほ">本館ロータリー横【4月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-20" id="hs19"
+      data-surface="1 0 419 510 435 0.046 0.698 0.256">
+        <div class="HotspotAnnotation"data-search="く　くら　クラブ　ク">クラブハウス前誘導【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-21" id="hs20"
+      data-surface="1 0 1147 272 237 0.793 0.009 0.198">
+        <div class="HotspotAnnotation"data-search="う　うけ　うけつけ">受付直前誘導【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-22" id="hs21"
+      data-surface="1 0 724 276 712 0.307 0.513 0.180">
+        <div class="HotspotAnnotation"data-search="ぴ　ぴろてぃ　ぴろ　ピロ　ピ">ピロティ通過直後(CT班テント寄り)【4月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-23" id="hs22"
+      data-surface="1 0 1147 1142 272 0.337 0.347 0.316">
+        <div class="HotspotAnnotation"data-search="ぴ　ぴろてぃ　ぴろ　ピロ　ピ">②ピロティ通過直後(2号館寄り)【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-24" id="hs23"
+      data-surface="1 0 1143 171 162 0.012 0.207 0.781">
+        <div class="HotspotAnnotation"data-search="2 に　にご　にごうか">2号館入口前【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+     <button class="Hotspot" slot="hotspot-25" id="hs24"
+      data-surface="1 0 64 195 189 0.628 0.165 0.206">
+        <div class="HotspotAnnotation"data-search="とけいとう　とうけいとう　とけい">④時計塔の下【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-26" id="hs25"
+      data-surface="1 0 955 898 901 0.248 0.619 0.133">
+        <div class="HotspotAnnotation"data-search="はち　はちごうかん　8">⑤8号館・グラウンド入口前【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-27" id="hs26"
+      data-surface="1 0 128 125 95 0.159 0.561 0.280">
+        <div class="HotspotAnnotation"data-search="10 じゅう　じゅ　じ　き　きっ　きっち">⑥10号館入口前・キッチンカー列誘導【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-28" id="hs27"
+      data-surface="1 0 959 892 895 0.233 0.521 0.247">
+        <div class="HotspotAnnotation"data-search="1 い　いちかい　いち">①1階 EVホール【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-29" id="hs28"
+      data-surface="2 0 2414 2417 4775 0.358 0.085 0.557">
+        <div class="HotspotAnnotation"data-search="9 きゅう　きゅうかい">②9階 EVホール【4月】【6月】【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-30" id="hs29"
+      data-surface="1 0 308 304 334 0.250 0.533 0.216">
+        <div class="HotspotAnnotation"data-search="き　きねんかん　きねん">①記念館 正面入口前【4月】【6月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-31" id="hs30"
+      data-surface="1 0 30 38 54 0.872 0.014 0.114">
+        <div class="HotspotAnnotation"data-search="き　きねんかん　きねん す　すと　すとーん">②記念館スロープ～ストーンサークル前【4月】【6月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+       <button class="Hotspot" slot="hotspot-32" id="hs31"
+      data-surface="1 0 624 650 626 0.012 0.898 0.089">
+        <div class="HotspotAnnotation"data-search="せ　せい　せいもん">②正門～本館までの車道【6月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-33" id="hs32"
+      data-surface="1 0 95 1105 1134 0.023 0.655 0.323">
+        <div class="HotspotAnnotation"data-search="な　なな　7 ななご">7号館前 入口【8月】</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-34" id="hs33"
+      data-surface="2 0 542 2300 480 0.671 0.256 0.072">
+        <div class="HotspotAnnotation"data-search="1 10 109">10900・10901前</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-35" id="hs34"
+      data-surface="2 0 542 2300 480 0.150 0.112 0.738">
+        <div class="HotspotAnnotation"data-search="1 10 109 10901">10902・10903前</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-36" id="hs35"
+      data-surface="2 0 4217 4242 4246 0.533 0.031 0.436">
+        <div class="HotspotAnnotation"data-search="1 い　いち　いちか　いちかい">1階 階段誘導</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-37" id="hs36"
+    data-surface="1 0 853 868 849 0.798 0.137 0.065">
+   <div class="HotspotAnnotation"data-search="き　きね　記　記念">記念館スロープ～ストーンサークル前</div>
+    <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-38 id="hs37"
+    data-surface="2 0 2958 3188 3226 0.740 0.131 0.129">
+   <div class="HotspotAnnotation"data-search="2 に　にか　2階">2階 場内誘導</div>
+    <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+</model-viewer>
+</div>
+
+
+
+<svg id="lineLayer"></svg>
+
+<div class="mv-search">
+  <input type="text" id="searchInput" placeholder="場所名を入力..." autocomplete="off">
+  <div id="searchDropdown" class="mv-dropdown"></div>
+</div>
+
+<!-- 左上info内部 -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2>このページについて</h2>
+    <p>
+      スワイプでモデル回転、二本指で拡大縮小<br>
+      左クリックしてドラッグでモデル回転、マウスホイールで拡大縮小<br>
+      下のボタンでその場所を強調し、その場所の画像を表示します<br>
+      2026ハヤシ
+    </p>
+  </div>
+</div>
+
+<script>
+const items = document.querySelectorAll('.job-item');
+const hotspots = document.querySelectorAll('.Hotspot');
+const svg = document.getElementById('lineLayer');
+const viewer = document.getElementById('viewer');
+const modal = document.getElementById('modal');
+const infoBtn = document.getElementById('infoBtn');
+
+
+infoBtn.addEventListener('click', ()=>{
+  modal.style.display = 'flex';
+});
+
+modal.addEventListener('click', (e)=>{
+  if(e.target === modal){
+    modal.style.display = 'none';
+  }
+});
+
+function resetAll(){
+  svg.innerHTML = '';
+  items.forEach(i=>i.classList.remove('active'));
+  hotspots.forEach(h=>{
+    h.classList.remove('dim');
+    h.querySelector('.popup-image').style.display='none';
+  });
+}
+
+async function centerHotspot(target){
+
+  await viewer.updateComplete;
+
+  const hotspot = viewer.queryHotspot(target.slot);
+  if(!hotspot) return;
+
+  const pos = hotspot.position;
+
+  viewer.cameraTarget = `${pos.x}m ${pos.y}m ${pos.z}m`;
+
+
+  let theta, phi, radius;
+
+  switch(target.id){
+
+    case "hs1": // ① 正門
+      theta = "30deg";
+      phi   = "70deg";
+      radius = "150m";
+      break;
+
+    case "hs2": // ② 正門
+      theta = "50deg";
+      phi   = "65deg";
+      radius = "180m";
+      break;
+
+    case "hs3": // ③ 車道
+      theta = "24deg";
+      phi   = "57deg";
+      radius = "220m";
+      break;
+
+    case "hs4": // ④ 車道
+      theta = "0.9deg";
+      phi   = "57deg";
+      radius = "260m";
+      break;
+
+    case "hs5": // ⑤ ロータリー
+      theta = "319deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
+      case "hs6": 
+      theta = "400deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
+     case "hs7": 
+      theta = "400deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+  
+      case "hs8": 
+      theta = "400deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
+      case "hs9": 
+      theta = "400deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
+
+    default:
+      theta = "40deg";
+      phi   = "60deg";
+      radius = "200m";
+  }
+
+  viewer.cameraOrbit = `${theta} ${phi} ${radius}`;
+}
+
+
+/* ===== searchsort機能 ===== */
+
+const searchInput = document.getElementById("searchInput");
+const searchDropdown = document.getElementById("searchDropdown");
+const hotspotsAll = document.querySelectorAll(".Hotspot");
+
+
+const hotspotData = [...hotspotsAll].map(h => {
+
+  const el = h.querySelector(".HotspotAnnotation");
+
+  const label = el.textContent.trim();
+  const searchText = el.dataset.search || "";
+
+  return {
+    id: h.id,
+    label: label,
+    search: (label + " " + searchText).toLowerCase()
+  };
+});
+
+function toHiragana(str){
+  return str
+    .replace(/[ァ-ン]/g, s =>
+      String.fromCharCode(s.charCodeAt(0) - 0x60)
+    )
+    .toLowerCase();
+}
+
+searchInput.addEventListener("input", () => {
+
+  svg.innerHTML = '';
+  document.querySelectorAll('.Hotspot.active')
+    .forEach(h => h.classList.remove('active'));
+
+  const keyword = searchInput.value.trim().toLowerCase();
+  searchDropdown.innerHTML = "";
+
+  if(keyword === ""){
+    searchDropdown.style.display = "none";
+    resetAll();
+    hotspotsAll.forEach(h=>h.classList.remove("dim"));
+    return;
+  }
+
+const matches = hotspotData.filter(h =>
+  h.search.includes(keyword)
+);
+
+  if(matches.length === 0){
+    searchDropdown.style.display = "none";
+    return;
+  }
+
+  matches.forEach(data => {
+
+    const option = document.createElement("div");
+    option.className = "search-option";
+    option.textContent = data.label;
+
+    option.addEventListener("click", () => {
+
+      searchInput.value = data.label;
+      searchDropdown.style.display = "none";
+
+      activateHotspot(data.id);
+    });
+
+    searchDropdown.appendChild(option);
+  });
+
+  searchDropdown.style.display = "block";
+});
+
+
+function activateHotspot(id){
+
+  resetAll();
+
+  hotspotsAll.forEach(h=>{
+    h.classList.add("dim");
+  });
+
+  const target = document.getElementById(id);
+
+  target.classList.remove("dim");
+  target.classList.add("active");
+  target.querySelector(".popup-image").style.display='block';
+
+  centerHotspot(target);
+
+
+}
+
+
+document.addEventListener("click", (e)=>{
+  if(!e.target.closest(".mv-search")){
+    searchDropdown.style.display = "none";
+  }
+});
+
+
+</script>
+
+
+<footer class="site-footer">
+
+  <div class="footer-links">
+    <a href="https://www.mejiro.ac.jp/univ/jyukensei/campuslife/mejista/">メジ☆スタ公式サイト</a>
+    <a href="https://www.mejiro.ac.jp/">目白大学</a>
+  </div>
+
+  <div class="footer-copy">
+    2026 ハヤシが作りました .
+  </div>
+
+</footer>
+
+</body>
+</html>
