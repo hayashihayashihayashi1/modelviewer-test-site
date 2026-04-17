@@ -86,37 +86,37 @@ window.addEventListener('load', () => {
       data-surface="1 0 724 276 712 0.307 0.513 0.180">
       
         <div class="HotspotAnnotation">①ピロティ通過直後(CT班テント寄り)</div>
-        <img src="images/3-1images/3-1_1_seimon1.png" class="popup-image">
+        <img src="images/3-3images/3-3_1_pirotexiato.jpg" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-3" id="hs2"
       data-surface="1 0 1147 1142 272 0.337 0.347 0.316">
         <div class="HotspotAnnotation">②ピロティ通過直後(2号館寄り)</div>
-        <img src="images/3-1images/3-1_2_seimon2.png" class="popup-image">
+        <img src="images/3-3images/3-3_2_uketukeato.jpg" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-4" id="hs3"
       data-surface="1 0 1143 171 162 0.012 0.207 0.781">
         <div class="HotspotAnnotation">③2号館入口前</div>
-        <img src="images/3-1images/3-1_3_siyadou1.png" class="popup-image">
+        <img src="images/3-3images/3-3_3_2goukanmae.jpg" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-5" id="hs4"
       data-surface="1 0 64 195 189 0.628 0.165 0.206">
         <div class="HotspotAnnotation">④時計塔の下</div>
-        <img src="images/3-1images/3-1_4_siyadou2.png" class="popup-image">
+        <img src="images/3-3images/3-3_4_tokeitousita.jpg" class="popup-image">
     </button>
 
-    　<button class="Hotspot" slot="hotspot-6" id="hs5"
+    <button class="Hotspot" slot="hotspot-6" id="hs5"
       data-surface="1 0 955 898 901 0.248 0.619 0.133">
         <div class="HotspotAnnotation">⑤8号館・グラウンド入口前</div>
-        <img src="images/3-1images/3-1_4_siyadou2.png" class="popup-image">
+        <img src="images/3-3images/3-3_5_guraundomae.jpg" class="popup-image">
     </button>
 
-      　<button class="Hotspot" slot="hotspot-7" id="hs6"
+    <button class="Hotspot" slot="hotspot-7" id="hs6"
       data-surface="1 0 128 125 95 0.159 0.561 0.280">
         <div class="HotspotAnnotation">⑥10号館入口前・キッチンカー列誘導</div>
-        <img src="images/3-1images/3-1_4_siyadou2.png" class="popup-image">
+        <img src="images/3-3images/3-3_6_kittinka.jpg" class="popup-image">
     </button>
 
 
@@ -192,38 +192,38 @@ async function centerHotspot(target){
 
   switch(target.id){
 
-    case "hs1": // ① 正門
-      theta = "30deg";
+    case "hs1": 
+      theta = "50deg";
       phi   = "70deg";
       radius = "150m";
       break;
 
-    case "hs2": // ② 正門
+    case "hs2": 
       theta = "50deg";
       phi   = "65deg";
       radius = "180m";
       break;
 
-    case "hs3": // ③ 車道
+    case "hs3": 
       theta = "24deg";
       phi   = "57deg";
       radius = "220m";
       break;
 
-    case "hs4": // ④ 車道
+    case "hs4": 
       theta = "0.9deg";
       phi   = "57deg";
       radius = "260m";
       break;
 
-    case "hs5": // ⑤ ロータリー
+    case "hs5": 
       theta = "319deg";
       phi   = "56deg";
       radius = "263m";
       break;
 
     default:
-      theta = "40deg";
+      theta = "10deg";
       phi   = "60deg";
       radius = "200m";
   }
@@ -231,7 +231,6 @@ async function centerHotspot(target){
   viewer.cameraOrbit = `${theta} ${phi} ${radius}`;
 }
 
-/* 線描画 */
 function drawLineTo(activeItem) {
   svg.innerHTML = '';
   const id = activeItem.dataset.target;

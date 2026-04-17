@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// 透明化リセット
 window.addEventListener('load', () => {
   resetAll();
 });
@@ -86,19 +85,19 @@ window.addEventListener('load', () => {
       data-surface="2 0 542 2300 480 0.671 0.256 0.072">
       
         <div class="HotspotAnnotation">①10900・10901前</div>
-        <img src="images/3-1images/3-1_1_seimon1.png" class="popup-image">
+        <img src="images/4-2images/4-2_1_10goukan10kai.jpg" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-3" id="hs2"
       data-surface="2 0 542 2300 480 0.150 0.112 0.738">
         <div class="HotspotAnnotation">②10902・10903前</div>
-        <img src="images/3-1images/3-1_2_seimon2.png" class="popup-image">
+        <img src="images/4-2images/4-2_2_10goukan10kai.jpg" class="popup-image">
     </button>
 
         <button class="Hotspot" slot="hotspot-4" id="hs3"
       data-surface="2 0 497 508 542 0.449 0.018 0.533">
         <div class="HotspotAnnotation">③フロア全体担当</div>
-        <img src="images/3-1images/3-1_2_seimon2.png" class="popup-image">
+        <img src="images/4-2images/4-2_3_10goukan10kai.jpg" class="popup-image">
     </button>
 
 
@@ -155,7 +154,6 @@ function resetAll(){
   });
 }
 
-/* カメラ寄せ*/
 async function centerHotspot(target){
 
   await viewer.updateComplete;
@@ -172,34 +170,22 @@ async function centerHotspot(target){
 
   switch(target.id){
 
-    case "hs1": // ① 正門
-      theta = "30deg";
-      phi   = "70deg";
+    case "hs1": 
+      theta = "20deg";
+      phi   = "20deg";
       radius = "150m";
       break;
 
-    case "hs2": // ② 正門
-      theta = "50deg";
-      phi   = "65deg";
+    case "hs2": 
+      theta = "30deg";
+      phi   = "20deg";
       radius = "180m";
       break;
 
-    case "hs3": // ③ 車道
-      theta = "24deg";
-      phi   = "57deg";
+    case "hs3": 
+      theta = "30deg";
+      phi   = "20deg";
       radius = "220m";
-      break;
-
-    case "hs4": // ④ 車道
-      theta = "0.9deg";
-      phi   = "57deg";
-      radius = "260m";
-      break;
-
-    case "hs5": // ⑤ ロータリー
-      theta = "319deg";
-      phi   = "56deg";
-      radius = "263m";
       break;
 
     default:
@@ -211,7 +197,6 @@ async function centerHotspot(target){
   viewer.cameraOrbit = `${theta} ${phi} ${radius}`;
 }
 
-/* 線描画 */
 function drawLineTo(activeItem) {
   svg.innerHTML = '';
   const id = activeItem.dataset.target;

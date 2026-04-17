@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// 透明化リセット
 window.addEventListener('load', () => {
   resetAll();
 });
@@ -86,19 +85,19 @@ window.addEventListener('load', () => {
       data-surface="2 0 4674 4666 4670 0.553 0.218 0.230">
       
         <div class="HotspotAnnotation">①</div>
-        <img src="images/3-1images/3-1_1_seimon1.png" class="popup-image">
+        <img src="images/4-3images/4-3_1_kaidan.jpg" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-3" id="hs2"
       data-surface="2 0 4674 4666 4670 0.553 0.218 0.230">
         <div class="HotspotAnnotation">②</div>
-        <img src="images/3-1images/3-1_2_seimon2.png" class="popup-image">
+        <img src="images/4-3images/4-3_2_sixyokudo.jpg" class="popup-image">
     </button>
 
         <button class="Hotspot" slot="hotspot-4" id="hs3"
       data-surface="2 0 4674 4666 4670 0.553 0.218 0.230">
         <div class="HotspotAnnotation">③</div>
-        <img src="images/3-1images/3-1_2_seimon2.png" class="popup-image">
+        <img src="images/4-3images/4-3_2_sixyokudo.jpg" class="popup-image">
     </button>
 
 
@@ -155,7 +154,6 @@ function resetAll(){
   });
 }
 
-/* カメラ寄せ*/
 async function centerHotspot(target){
 
   await viewer.updateComplete;
@@ -172,19 +170,19 @@ async function centerHotspot(target){
 
   switch(target.id){
 
-    case "hs1": // ① 正門
+    case "hs1": 
       theta = "30deg";
       phi   = "70deg";
       radius = "150m";
       break;
 
-    case "hs2": // ② 正門
+    case "hs2": 
       theta = "50deg";
       phi   = "65deg";
       radius = "180m";
       break;
 
-    case "hs3": // ③ 車道
+    case "hs3": 
       theta = "24deg";
       phi   = "57deg";
       radius = "220m";
@@ -199,7 +197,6 @@ async function centerHotspot(target){
   viewer.cameraOrbit = `${theta} ${phi} ${radius}`;
 }
 
-/* 線描画 */
 function drawLineTo(activeItem) {
   svg.innerHTML = '';
   const id = activeItem.dataset.target;
