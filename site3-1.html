@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// 透明化リセット
 window.addEventListener('load', () => {
   resetAll();
 });
@@ -167,7 +166,7 @@ function resetAll(){
   });
 }
 
-/* カメラ寄せ*/
+
 async function centerHotspot(target){
 
   await viewer.updateComplete;
@@ -223,7 +222,6 @@ async function centerHotspot(target){
   viewer.cameraOrbit = `${theta} ${phi} ${radius}`;
 }
 
-/* 線描画 */
 function drawLineTo(activeItem) {
   svg.innerHTML = '';
   const id = activeItem.dataset.target;

@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// 透明化リセット
+// 透明化解除
 window.addEventListener('load', () => {
   resetAll();
 });
@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
 
 <body>
 
-<!-- 左上戻るボタン -->
+<!-- 左上戻る -->
 <div class="top-buttons">
   <button onclick="location.href='index.html'">← 戻る</button>
   <button id="infoBtn">i info</button>
@@ -116,14 +116,22 @@ window.addEventListener('load', () => {
         <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
     </button>
 
-    <button class="Hotspot" slot="hotspot-9" id="hs8">
-      <data-surface="1 0 113 110 202 0.086 0.570 0.343">
+    <button class="Hotspot" slot="hotspot-9" id="hs8"
+      data-surface="1 0 113 110 202 0.124 0.278 0.598">
         <div class="HotspotAnnotation"data-search="だ　だいに　だい">第二体育館階段降り口付近</div>
         <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
     </button>
+
+
         <button class="Hotspot" slot="hotspot-10" id="hs9"
       data-surface="1 0 30 38 54 0.872 0.014 0.114">
         <div class="HotspotAnnotation"data-search="すとーん　すと　す">ストーンサークル前</div>
+        <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
+    </button>
+
+      <button class="Hotspot" slot="hotspot-10" id="hs9"
+      data-surface="1 0 30 38 54 0.872 0.014 0.114">
+        <div class="HotspotAnnotation"data-search="き　きねんかん　きねん す　すと　すとーん">②記念館スロープ～ストーンサークル前【4月】【6月】</div>
         <img src="images/3-1images/3-1_5_routari1.png" class="popup-image">
     </button>
 
@@ -347,7 +355,6 @@ function resetAll(){
   });
 }
 
-/* カメラ寄せ*/
 async function centerHotspot(target){
 
   await viewer.updateComplete;
@@ -394,6 +401,31 @@ async function centerHotspot(target){
       radius = "263m";
       break;
 
+      case "hs6": 
+      theta = "400deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
+     case "hs7": 
+      theta = "400deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+  
+      case "hs8": 
+      theta = "400deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
+      case "hs9": 
+      theta = "400deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
+
     default:
       theta = "40deg";
       phi   = "60deg";
@@ -405,13 +437,12 @@ async function centerHotspot(target){
 
 
 /* ===== searchsort機能 ===== */
-/* ===== 100件対応検索 ===== */
 
 const searchInput = document.getElementById("searchInput");
 const searchDropdown = document.getElementById("searchDropdown");
 const hotspotsAll = document.querySelectorAll(".Hotspot");
 
-/* hotspotデータ化 */
+
 const hotspotData = [...hotspotsAll].map(h => {
 
   const el = h.querySelector(".HotspotAnnotation");
@@ -500,7 +531,6 @@ function activateHotspot(id){
 }
 
 
-/* 外クリックで閉じる */
 document.addEventListener("click", (e)=>{
   if(!e.target.closest(".mv-search")){
     searchDropdown.style.display = "none";
