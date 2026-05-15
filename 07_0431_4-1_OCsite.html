@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   resetAll();
 });
+
+
 </script>
 
 </head>
@@ -79,12 +81,12 @@ window.addEventListener('load', () => {
   camera-orbit="40deg 50deg 500m"
   min-camera-orbit="auto 0deg 250m"
   max-camera-orbit="auto 90deg 600m">
-  >
+  
 
     <button class="Hotspot" slot="hotspot-1" id="hs1"
       data-surface="1 0 959 892 895 0.233 0.521 0.247">
       
-        <div class="HotspotAnnotation">①1階 EVホール</div>
+        <div class="HotspotAnnotation">①②1階 EVホール</div>
         <img src="images/4-1images/4-1_10goukan1kai.jpg" class="popup-image">
     </button>
 
@@ -101,7 +103,7 @@ window.addEventListener('load', () => {
 <svg id="lineLayer"></svg>
 
 <div class="bottom-panel">
-  <div class="job-item" data-target="hs1">①1階 EVホール</div>
+  <div class="job-item" data-target="hs1">①②1階 EVホール</div>
   <div class="job-item" data-target="hs2">②9階 EVホール</div>
 </div>
 
@@ -236,6 +238,10 @@ window.addEventListener('resize', ()=>{
   if(activeItem) drawLineTo(activeItem);
 });
 </script>
+
+
+
+</div>
 
 </body>
 </html>

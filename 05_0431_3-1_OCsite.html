@@ -89,20 +89,26 @@ window.addEventListener('load', () => {
     </button>
 
     <button class="Hotspot" slot="hotspot-3" id="hs2"
-      data-surface="1 0 392 489 493 0.161 0.175 0.664">
-        <div class="HotspotAnnotation">②本館ロータリー横</div>
+      data-surface="1 0 667 607 604 1.346 -0.324 -0.023">
+        <div class="HotspotAnnotation">②正門～本館までの車道</div>
         <img src="images/3-1images/3-1_2_rotari.jpg" class="popup-image">
     </button>
 
-    <button class="Hotspot" slot="hotspot-4" id="hs3"
-      data-surface="1 0 419 510 435 0.046 0.698 0.256">
-        <div class="HotspotAnnotation">③クラブハウス前誘導</div>
+        <button class="Hotspot" slot="hotspot-4" id="hs3"
+      data-surface="1 0 392 489 493 0.161 0.175 0.664">
+        <div class="HotspotAnnotation">③本館ロータリー横</div>
         <img src="images/3-1images/3-1_2_rotari.jpg" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-5" id="hs4"
-      data-surface="1 0 1147 272 237 0.793 0.009 0.198">
-        <div class="HotspotAnnotation">④受付直前誘導</div>
+      data-surface="1 0 419 510 435 0.046 0.698 0.256">
+        <div class="HotspotAnnotation">④クラブハウス前誘導</div>
+        <img src="images/3-1images/3-1_2_rotari.jpg" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-6" id="hs5"
+      data-surface="1 0 1194 1186 156 0.647 0.817 -0.463">
+        <div class="HotspotAnnotation">⑤受付前誘導</div>
         <img src="images/3-1images/3-1_4_uketukeato.jpg" class="popup-image">
     </button>
 
@@ -113,9 +119,10 @@ window.addEventListener('load', () => {
 
 <div class="bottom-panel">
   <div class="job-item" data-target="hs1">①正門</div>
-  <div class="job-item" data-target="hs2">②本館ロータリー横</div>
-  <div class="job-item" data-target="hs3">③クラブハウス前誘導</div>
-  <div class="job-item" data-target="hs4">④受付直前誘導</div>
+  <div class="job-item" data-target="hs2">②正門～本館までの車道</div>
+  <div class="job-item" data-target="hs3">③本館ロータリー横</div>
+  <div class="job-item" data-target="hs4">④クラブハウス前誘導</div>
+  <div class="job-item" data-target="hs5">④受付前誘導</div>
 </div>
 
 <!-- 左上info内部 -->
@@ -188,19 +195,19 @@ async function centerHotspot(target){
       break;
 
     case "hs3": 
-      theta = "-15deg";
-      phi   = "57deg";
+      theta = "30deg";
+      phi   = "50deg";
       radius = "220m";
       break;
 
     case "hs4": 
-      theta = "50deg";
-      phi   = "57deg";
-      radius = "260m";
+      theta = "-30deg";
+      phi   = "50deg";
+      radius = "220m";
       break;
 
     default:
-      theta = "40deg";
+      theta = "-30deg";
       phi   = "60deg";
       radius = "200m";
   }

@@ -460,3 +460,69 @@ model-viewer {
   font-size:13px;
   opacity:0.9;
 }
+
+/* =========================
+   画像拡大モーダル
+========================= */
+
+.image-viewer{
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.25s ease-in,
+    visibility 0.25s ease-in;
+
+  z-index: 99999;
+}
+
+.image-viewer.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-viewer img{
+  max-width: 92vw;
+  max-height: 88vh;
+
+  border-radius: 14px;
+
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+
+  transform: scale(0.7);
+
+  transition: transform 0.25s ease-in;
+}
+
+.image-viewer.show img{
+  transform: scale(1);
+}
+
+.image-close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0,0,0,0.8);
+  color: white;
+
+  font-size: 28px;
+  cursor: pointer;
+}
+

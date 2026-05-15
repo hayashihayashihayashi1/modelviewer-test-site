@@ -20,8 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const hotspots = document.querySelectorAll('.Hotspot');
 
-  hotspots.forEach(hotspot => {
-    hotspot.addEventListener('click', () => {
+hotspots.forEach(hotspot => {
+
+  hotspot.addEventListener('click', (e) => {
+
+    /* 画像押した時は無視 */
+    if(e.target.classList.contains('popup-image')){
+      return;
+    }
 
       const id = hotspot.id;
 
@@ -84,13 +90,19 @@ window.addEventListener('load', () => {
     <button class="Hotspot" slot="hotspot-1" id="hs1"
       data-surface="1 0 113 110 202 0.124 0.278 0.598">
       
-        <div class="HotspotAnnotation">①SNS促進</div>
+        <div class="HotspotAnnotation">①SNS促進(テント内)</div>
         <img src="images/1-2images/1-2_1_SNS.jpg" class="popup-image">
     </button>
 
     <button class="Hotspot" slot="hotspot-3" id="hs2"
       data-surface="1 0 115 150 202 0.124 0.275 0.6">
-        <div class="HotspotAnnotation">②アンケート回答</div>
+        <div class="HotspotAnnotation">②アンケート回答(テント内)</div>
+        <img src="images/1-2images/1-2_1_SNS.jpg" class="popup-image">
+    </button>
+
+    <button class="Hotspot" slot="hotspot-4" id="hs3"
+      data-surface="1 0 110 150 215 0.115 0.20 0.6">
+        <div class="HotspotAnnotation">③アンケートカード配布(テント周辺)</div>
         <img src="images/1-2images/1-2_1_SNS.jpg" class="popup-image">
     </button>
 
@@ -100,8 +112,9 @@ window.addEventListener('load', () => {
 <svg id="lineLayer"></svg>
 
 <div class="bottom-panel">
-  <div class="job-item" data-target="hs1">①SNS促進</div>
-  <div class="job-item" data-target="hs2">②アンケート回答</div>
+  <div class="job-item" data-target="hs1">①SNS促進(テント内)</div>
+  <div class="job-item" data-target="hs2">②アンケート回答(テント内)</div>
+  <div class="job-item" data-target="hs3">③アンケートカード配布(テント周辺)</div>
 </div>
 
 <!-- 左上info内部 -->
@@ -251,7 +264,69 @@ window.addEventListener('resize', ()=>{
   const activeItem = document.querySelector('.job-item.active');
   if(activeItem) drawLineTo(activeItem);
 });
+
+/* =========================
+   画像拡大
+========================= */
+
+const popupImages =
+  document.querySelectorAll('.popup-image');
+
+const imageViewer =
+  document.getElementById('imageViewer');
+
+const viewerImage =
+  document.getElementById('viewerImage');
+
+const imageClose =
+  document.getElementById('imageClose');
+
+/* =========================
+   画像拡大
+========================= */
+
+document.addEventListener('click', (e) => {
+
+  /* popup-image以外は無視 */
+  if(!e.target.classList.contains('popup-image')){
+    return;
+  }
+
+  e.stopPropagation();
+
+  viewerImage.src = e.target.src;
+
+  imageViewer.classList.add('show');
+
+});
+
+/* ×ボタン */
+imageClose.addEventListener('click', ()=>{
+
+  imageViewer.classList.remove('show');
+
+});
+
+/* 背景クリック */
+imageViewer.addEventListener('click', (e)=>{
+
+  if(e.target === imageViewer){
+    imageViewer.classList.remove('show');
+  }
+
+});
 </script>
+
+<!-- 画像拡大モーダル -->
+<div id="imageViewer" class="image-viewer">
+
+  <button id="imageClose" class="image-close">
+    ×
+  </button>
+
+  <img id="viewerImage" src="" alt="expanded">
+
+</div>
 
 </body>
 </html>
