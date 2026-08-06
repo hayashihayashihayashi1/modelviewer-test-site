@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>【3-①】 受付誘導・参加証確認（AM1号館1階ピロティ→PM本館前）</title>
+<title>【5-④】屋内誘導（10号館1階エレベーターホール誘導）</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   resetAll();
 });
+
+
 </script>
 
 </head>
@@ -63,7 +65,7 @@ window.addEventListener('load', () => {
   <button id="infoBtn">i info</button>
 </div>
 <!-- 上表示文字 -->
-<h1>【3-①】 受付誘導・参加証確認（AM1号館1階ピロティ→PM本館前）</h1>
+<h1>【5-④】屋内誘導（10号館1階エレベーターホール誘導）</h1>
 
 <div class="viewer-container">
 
@@ -82,19 +84,12 @@ window.addEventListener('load', () => {
   
 
     <button class="Hotspot" slot="hotspot-1" id="hs1"
-      data-surface="1 0 253 1167 1170 0.163 0.690 0.147">
+      data-surface="1 0 959 892 895 0.233 0.521 0.247">
       
-        <div class="HotspotAnnotation">【午前】【3-①】 受付誘導・参加証確認（1号館1階ピロティ）</div>
-        <img src="images/2-2images/2-2_1_uketuke.jpg" class="popup-image">
+        <div class="HotspotAnnotation">①②1階 EVホール</div>
+        <img src="images/4-1images/4-1_10goukan1kai.jpg" class="popup-image">
     </button>
 
-
-     <button class="Hotspot" slot="hotspot-2" id="hs2"
-      data-surface="1 0 598 601 713 0.222 0.428 0.350">
-      
-        <div class="HotspotAnnotation">【午後】【3-①】 受付誘導・参加証確認（PM本館前）</div>
-        <img src="images/3-1images/3-1_2_20260719_honkanme.jpg" class="popup-image">
-    </button>
 
 </model-viewer>
 </div>
@@ -102,11 +97,10 @@ window.addEventListener('load', () => {
 <svg id="lineLayer"></svg>
 
 <div class="bottom-panel">
-  <div class="job-item" data-target="hs1">【午前】リーダー/②③</div>
-  <div class="job-item" data-target="hs2">【午後】リーダー/②③</div>
+  <div class="job-item" data-target="hs1">①②1階 EVホール</div>
 </div>
 
-
+<!-- 左上info内部 -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <h2>このページについて</h2>
@@ -163,12 +157,19 @@ async function centerHotspot(target){
 
   switch(target.id){
 
-    case "hs1": 
-      theta = "50deg";
+    case "hs1": // ① 正門
+      theta = "-20deg";
       phi   = "70deg";
       radius = "150m";
       break;
 
+    case "hs2": // ② 正門
+      theta = "20deg";
+      phi   = "65deg";
+      radius = "180m";
+      break;
+
+  
     default:
       theta = "40deg";
       phi   = "60deg";
@@ -230,6 +231,10 @@ window.addEventListener('resize', ()=>{
   if(activeItem) drawLineTo(activeItem);
 });
 </script>
+
+
+
+</div>
 
 </body>
 </html>
