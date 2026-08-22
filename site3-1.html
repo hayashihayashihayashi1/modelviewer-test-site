@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -57,12 +57,11 @@ window.addEventListener('load', () => {
 </div>
 
   
-<!-- 左上戻るボタン -->
 <div class="top-buttons">
   <button onclick="location.href='index.html'">← 戻る</button>
   <button id="infoBtn">i info</button>
 </div>
-<!-- 上表示文字 -->
+
 <h1>3-1 屋外誘導(正門～本館までの車道)</h1>
 
 <div class="viewer-container">
@@ -125,7 +124,6 @@ window.addEventListener('load', () => {
   <div class="job-item" data-target="hs5">⑤ ロータリー</div>
 </div>
 
-<!-- 左上info内部 -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <h2>このページについて</h2>
@@ -183,31 +181,31 @@ async function centerHotspot(target){
 
   switch(target.id){
 
-    case "hs1": // ① 正門
+    case "hs1": 
       theta = "30deg";
       phi   = "70deg";
       radius = "150m";
       break;
 
-    case "hs2": // ② 正門
+    case "hs2": 
       theta = "50deg";
       phi   = "65deg";
       radius = "180m";
       break;
 
-    case "hs3": // ③ 車道
+    case "hs3": 
       theta = "24deg";
       phi   = "57deg";
       radius = "220m";
       break;
 
-    case "hs4": // ④ 車道
+    case "hs4":
       theta = "0.9deg";
       phi   = "57deg";
       radius = "260m";
       break;
 
-    case "hs5": // ⑤ ロータリー
+    case "hs5": 
       theta = "319deg";
       phi   = "56deg";
       radius = "263m";
