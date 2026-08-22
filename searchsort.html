@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// 透明化解除
 window.addEventListener('load', () => {
   resetAll();
 });
@@ -47,12 +46,11 @@ window.addEventListener('load', () => {
 
 <body>
 
-<!-- 左上戻る -->
 <div class="top-buttons">
   <button onclick="location.href='index.html'">← 戻る</button>
   <button id="infoBtn">i info</button>
 </div>
-<!-- 上表示文字 -->
+
 <h1>役割場所個別検索</h1>
 
 <div class="top-logo">
@@ -314,7 +312,6 @@ window.addEventListener('load', () => {
   <div id="searchDropdown" class="mv-dropdown"></div>
 </div>
 
-<!-- 左上info内部 -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <h2>このページについて</h2>
@@ -371,31 +368,31 @@ async function centerHotspot(target){
 
   switch(target.id){
 
-    case "hs1": // ① 正門
+    case "hs1": 
       theta = "30deg";
       phi   = "70deg";
       radius = "150m";
       break;
 
-    case "hs2": // ② 正門
+    case "hs2": 
       theta = "50deg";
       phi   = "65deg";
       radius = "180m";
       break;
 
-    case "hs3": // ③ 車道
+    case "hs3":
       theta = "24deg";
       phi   = "57deg";
       radius = "220m";
       break;
 
-    case "hs4": // ④ 車道
+    case "hs4":
       theta = "0.9deg";
       phi   = "57deg";
       radius = "260m";
       break;
 
-    case "hs5": // ⑤ ロータリー
+    case "hs5": 
       theta = "319deg";
       phi   = "56deg";
       radius = "263m";
@@ -436,7 +433,6 @@ async function centerHotspot(target){
 }
 
 
-/* ===== searchsort機能 ===== */
 
 const searchInput = document.getElementById("searchInput");
 const searchDropdown = document.getElementById("searchDropdown");
