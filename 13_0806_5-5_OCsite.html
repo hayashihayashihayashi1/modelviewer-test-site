@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>【5-⑤】屋内誘導（10号館9階誘導）</title>
+<title>5-⑥屋内誘導(佐藤重遠記念館内ガイダンス誘導　集合場所：佐藤重遠記念館 2階)</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -57,13 +57,12 @@ window.addEventListener('load', () => {
 </div>
 
   
-
 <div class="top-buttons">
   <button onclick="location.href='index.html'">← 戻る</button>
   <button id="infoBtn">i info</button>
 </div>
 
-<h1>【5-⑤】屋内誘導（10号館9階誘導）</h1>
+<h1>5-⑥屋内誘導(佐藤重遠記念館内ガイダンス誘導　集合場所：佐藤重遠記念館 2階)</h1>
 
 <div class="viewer-container">
 
@@ -79,27 +78,26 @@ window.addEventListener('load', () => {
   camera-orbit="40deg 50deg 500m"
   min-camera-orbit="auto 0deg 250m"
   max-camera-orbit="auto 90deg 600m">
+  
 
-    <button class="Hotspot" slot="hotspot-1" id="hs1"
-      data-surface="2 0 542 2300 480 0.671 0.256 0.072">
-      
-        <div class="HotspotAnnotation">リーダー・9階統括</div>
-        <img src="images/4-1images/4-1_2_10goukan9kai.jpg" class="popup-image">
+
+    <button class="Hotspot" slot="hotspot-4" id="hs3"
+      data-surface="2 0 2958 3188 3226 0.740 0.131 0.129">
+        <div class="HotspotAnnotation">リーダー・2階 場内誘導</div>
+        <img src="images/4-5images/4-5_3_kinenkan2kai.jpg" class="popup-image">
     </button>
 
-    <button class="Hotspot" slot="hotspot-2" id="hs2"
-      data-surface="2 0 542 2300 480 0.671 0.256 0.072">
-      
-        <div class="HotspotAnnotation">①10900・10901前</div>
-        <img src="images/4-2images/4-2_1_10goukan10kai.jpg" class="popup-image">
+    <button class="Hotspot" slot="hotspot-5" id="hs4"
+      data-surface="2 0 2958 3188 3226 0.740 0.131 0.129">
+        <div class="HotspotAnnotation">①2階 場内誘導</div>
+        <img src="images/4-5images/4-5_4_kinenkan2kai.jpg" class="popup-image">
     </button>
 
-    <button class="Hotspot" slot="hotspot-3" id="hs3"
-      data-surface="2 0 542 2300 480 0.150 0.112 0.738">
-        <div class="HotspotAnnotation">②10902・10903前</div>
-        <img src="images/4-2images/4-2_2_10goukan10kai.jpg" class="popup-image">
+    <button class="Hotspot" slot="hotspot-6" id="hs5"
+      data-surface="2 0 2958 3188 3226 0.740 0.131 0.129">
+        <div class="HotspotAnnotation">②2階 場内誘導</div>
+        <img src="images/4-5images/4-5_5_kinenkan2kai.jpg" class="popup-image">
     </button>
-
 
 
 </model-viewer>
@@ -108,10 +106,9 @@ window.addEventListener('load', () => {
 <svg id="lineLayer"></svg>
 
 <div class="bottom-panel">
-  <div class="job-item" data-target="hs1">リーダー・9階統括</div>
-  <div class="job-item" data-target="hs2">①10900・10901前</div>
-  <div class="job-item" data-target="hs3">②10902・10903前</div>
-
+  <div class="job-item" data-target="hs3">リーダー・2階 場内誘導</div>
+  <div class="job-item" data-target="hs4">①2階 場内誘導</div>
+  <div class="job-item" data-target="hs5">②2階 場内誘導</div>
 </div>
 
 <div class="modal-overlay" id="modal">
@@ -171,25 +168,37 @@ async function centerHotspot(target){
   switch(target.id){
 
     case "hs1": 
-      theta = "20deg";
-      phi   = "20deg";
+      theta = "30deg";
+      phi   = "69deg";
       radius = "150m";
       break;
 
     case "hs2": 
-      theta = "30deg";
-      phi   = "20deg";
+      theta = "50deg";
+      phi   = "65deg";
       radius = "180m";
       break;
 
     case "hs3": 
-      theta = "30deg";
-      phi   = "20deg";
+      theta = "24deg";
+      phi   = "57deg";
       radius = "220m";
       break;
 
+    case "hs4": 
+      theta = "0.9deg";
+      phi   = "57deg";
+      radius = "260m";
+      break;
+
+    case "hs5":
+      theta = "319deg";
+      phi   = "56deg";
+      radius = "263m";
+      break;
+
     default:
-      theta = "40deg";
+      theta = "330deg";
       phi   = "60deg";
       radius = "200m";
   }
