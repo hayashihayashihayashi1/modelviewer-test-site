@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// 透明化リセット
 window.addEventListener('load', () => {
   resetAll();
 });
@@ -58,12 +57,12 @@ window.addEventListener('load', () => {
 </div>
 
   
-<!-- 左上戻るボタン -->
+
 <div class="top-buttons">
   <button onclick="location.href='index.html'">← 戻る</button>
   <button id="infoBtn">i info</button>
 </div>
-<!-- 上表示文字 -->
+
 <h1>【1-②】メジ★トーク</h1>
 
 <div class="viewer-container">
@@ -105,7 +104,6 @@ window.addEventListener('load', () => {
   <div class="job-item" data-target="hs2">2階 ネットカフェ</div> 
 </div>
 
-<!-- 左上info内部 -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <h2>このページについて</h2>
@@ -162,13 +160,13 @@ async function centerHotspot(target){
 
   switch(target.id){
 
-    case "hs1": // ① 正門
+    case "hs1": 
       theta = "-20deg";
       phi   = "70deg";
       radius = "150m";
       break;
 
-    case "hs2": // ② 正門
+    case "hs2": 
       theta = "-20deg";
       phi   = "65deg";
       radius = "180m";
